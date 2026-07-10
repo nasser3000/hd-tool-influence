@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get  "participations/new", to: "participations#new", as: :new_participation
   post "participations", to: "participations#create", as: :participations
   get  "participations/:token", to: "participations#show", as: :participation
+  get  "diag/xk9mq2", to: "diagnostics#run"
 end

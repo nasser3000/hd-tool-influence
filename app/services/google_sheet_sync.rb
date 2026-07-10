@@ -19,24 +19,26 @@ class GoogleSheetSync
     uri = URI(WEBHOOK_URL)
     uri.query = URI.encode_www_form(params)
 
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true
-    http.open_timeout = 5
-    http.read_timeout = 10
+    # Suit les redirections Google (max 5)
+    5.times do |i|
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = (uri.scheme == "https")
+      http.open_timeout = 15
+      http.read_timeout = 30
 
-    # Suit les redirections Google (max 3)
-    3.times do
       response = http.request(Net::HTTP::Get.new(uri))
-      if %w[301 302].include?(response.code)
-        uri = URI(response["location"])
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = uri.scheme == "https"
+      Rails.logger.info "[GoogleSheetSync] #{i+1}. #{response.code} #{uri.host}"
+
+      if %w[301 302 303].include?(response.code)
+        location = response["location"]
+        break unless location
+        uri = URI(location)
       else
-        Rails.logger.info "[GoogleSheetSync] #{response.code} — #{response.body.truncate(100)}"
+        Rails.logger.info "[GoogleSheetSync] OK — #{response.body.to_s.truncate(120)}"
         break
       end
     end
   rescue => e
-    Rails.logger.error "[GoogleSheetSync] Erreur : #{e.message}"
+    Rails.logger.error "[GoogleSheetSync] Erreur : #{e.class} — #{e.message}"
   end
 end

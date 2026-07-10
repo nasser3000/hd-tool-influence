@@ -11,8 +11,12 @@ class ParticipationsController < ApplicationController
     @participation = Participation.new(participation_params)
 
     if @participation.save
-      ParticipationMailer.confirmation(@participation).deliver_later
-      ParticipationMailer.admin_notification(@participation).deliver_later
+      begin
+        ParticipationMailer.confirmation(@participation).deliver_now
+        ParticipationMailer.admin_notification(@participation).deliver_now
+      rescue => e
+        Rails.logger.error "[Mailer] #{e.class}: #{e.message}"
+      end
       GoogleSheetSync.push(@participation)
       redirect_to participation_path(@participation.token)
     else

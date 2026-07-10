@@ -23,10 +23,12 @@ class DiagnosticsController < ApplicationController
     # Test TCP port 587 to Brevo SMTP relay
     begin
       require "socket"
+      require "timeout"
       t = Time.now
-      s = TCPSocket.new("smtp-relay.brevo.com", 587)
-      s.close
+      Timeout.timeout(5) { s = TCPSocket.new("smtp-relay.brevo.com", 587); s.close }
       results[:brevo_smtp_587] = "OK (#{((Time.now - t)*1000).round}ms)"
+    rescue Timeout::Error
+      results[:brevo_smtp_587] = "Timeout (port bloqué)"
     rescue => e
       results[:brevo_smtp_587] = "#{e.class}: #{e.message}"
     end

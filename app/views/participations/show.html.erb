@@ -1,0 +1,46 @@
+<div class="confirmation-page">
+  <div class="confirmation-icon">✓</div>
+
+  <h1>C'est confirmé !</h1>
+  <p class="subtitle">
+    Félicitations <%= @participation.first_name %> ! Ta participation est bien enregistrée.
+    Nous avons hâte de te retrouver en boutique cet été. 🍦
+  </p>
+
+  <div class="confirmation-card">
+    <h3>Récapitulatif</h3>
+
+    <div class="info-row">
+      <span class="info-label">Nom</span>
+      <span class="info-value"><%= @participation.first_name %> <%= @participation.last_name %></span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Instagram</span>
+      <span class="info-value"><%= @participation.instagram_handle %></span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Email</span>
+      <span class="info-value"><%= @participation.email %></span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Boutique</span>
+      <span class="info-value"><%= @store.city %> — <%= @store.name %></span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Adresse</span>
+      <span class="info-value"><%= @store.address %></span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Offre</span>
+      <span class="info-value"><%= simple_format @store.offer, {}, wrapper_tag: "span" %></span>
+    </div>
+  </div>
+
+  <div class="email-notice">
+    <p>📧 Un email de confirmation avec ton bon a été envoyé à <strong><%= @participation.email %></strong>. Présente-le en boutique lors de ta visite.</p>
+  </div>
+
+  <%= link_to root_path, class: "btn-home" do %>
+    ← Retour à l'accueil
+  <% end %>
+</div>

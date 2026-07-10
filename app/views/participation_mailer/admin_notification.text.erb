@@ -1,0 +1,14 @@
+Nouvelle inscription influenceur — Häagen-Dazs
+=============================================
+
+Boutique : <%= @store.name %>
+Adresse   : <%= @store.address %>
+
+Influenceur : <%= @participation.first_name %> <%= @participation.last_name %>
+Instagram   : <%= @participation.instagram_handle %>
+Email       : <%= @participation.email %>
+
+Offre : <%= @store.offer.gsub("\n", " · ") %>
+
+Inscrit le : <%= @participation.created_at.strftime("%d/%m/%Y à %H:%M") %>
+Référence  : <%= @participation.token %>

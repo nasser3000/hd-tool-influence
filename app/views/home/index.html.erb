@@ -1,0 +1,92 @@
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-badge">🍦 Été 2026 — Offre exclusive influenceurs</div>
+
+    <h1 class="hero-title">Vivez l'expérience<br><em>Häagen-Dazs</em></h1>
+
+    <p class="hero-desc">L'équipe <strong>Undercover</strong> t'invite à une pause gourmande dans nos cafés-boutiques en France et en Belgique. Des saveurs exclusives que tu ne trouveras nulle part ailleurs.</p>
+
+    <div class="hero-chips">
+      <span class="hero-chip">🍓 Strawberry Mochi</span>
+      <span class="hero-chip">🍫 Chocolat Brownie</span>
+      <span class="hero-chip">🍋 Sorbet Lemonade</span>
+    </div>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-icon">🎁</span>
+        <span>Une offre exclusive par boutique à partager avec ta communauté</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-icon">📸</span>
+        <span>En retour : 1 story mentionnant <strong>@haagendazsfrance</strong></span>
+      </div>
+      <div class="hero-meta-item hero-meta-urgency">
+        <span class="hero-meta-icon">⚡</span>
+        <span>Nombre de bons limités — ne traîne pas !</span>
+      </div>
+    </div>
+
+    <a href="#boutiques" class="hero-cta">Choisir ma boutique →</a>
+
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:80px;display:block;">
+      <path d="M0,20 C360,80 1080,80 1440,20 L1440,80 L0,80 Z" fill="#FDF5ED"/>
+    </svg>
+  </div>
+</section>
+
+<section class="stores-section" id="boutiques">
+  <p class="section-title">Choisis ta boutique</p>
+
+  <nav class="country-tabs">
+    <%= link_to root_path(anchor: "boutiques"), class: "country-tab #{@country.nil? ? 'active' : ''}" do %>
+      🌍 Toutes
+    <% end %>
+    <%= link_to root_path(country: "FR", anchor: "boutiques"), class: "country-tab #{@country == 'FR' ? 'active' : ''}" do %>
+      🇫🇷 France
+    <% end %>
+    <%= link_to root_path(country: "BE", anchor: "boutiques"), class: "country-tab #{@country == 'BE' ? 'active' : ''}" do %>
+      🇧🇪 Belgique
+    <% end %>
+  </nav>
+
+  <% if @stores.any? %>
+    <div class="stores-grid">
+      <% @stores.each do |store| %>
+        <article class="store-card">
+          <div class="store-card-header">
+            <div class="store-card-country"><%= store.country == "FR" ? "🇫🇷 France" : "🇧🇪 Belgique" %></div>
+            <div class="store-card-city"><%= store.city %></div>
+            <div class="store-card-name"><%= store.name %></div>
+          </div>
+          <div class="store-card-body">
+            <div class="store-card-address">
+              <span class="icon">📍</span>
+              <span><%= store.address %></span>
+            </div>
+            <div class="offer-box">
+              <div class="offer-label">🎁 Offre exclusive</div>
+              <div class="offer-text"><%= simple_format store.offer, {}, wrapper_tag: "span" %></div>
+            </div>
+            <%= link_to new_participation_path(store_id: store.id), class: "store-card-cta" do %>
+              Je choisis cette boutique →
+            <% end %>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="empty-state">
+      <p style="font-size:2.5rem">🍦</p>
+      <p>Aucune boutique disponible pour cette sélection.</p>
+    </div>
+  <% end %>
+
+  <div class="stores-footer">
+    <p>À très vite — Bises givrées de toute la team Undercover 🍨🍦🧋🥶🥰🤗</p>
+  </div>
+</section>

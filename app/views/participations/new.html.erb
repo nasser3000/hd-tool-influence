@@ -1,0 +1,56 @@
+<div class="form-page">
+  <%= link_to root_path, class: "back-link" do %>
+    ← Changer de boutique
+  <% end %>
+
+  <div class="form-store-recap">
+    <div class="store-label"><%= @store.country == "FR" ? "🇫🇷 France" : "🇧🇪 Belgique" %></div>
+    <h2><%= @store.city %></h2>
+    <p class="store-address-small">📍 <%= @store.address %></p>
+    <div class="recap-offer">
+      <strong>🎁 Ton offre :</strong> <%= simple_format @store.offer, {}, wrapper_tag: "span" %>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <p class="form-intro">Remplis le formulaire ci-dessous pour confirmer ta participation. Tu recevras un bon de confirmation par email.</p>
+
+    <% if @participation.errors.any? %>
+      <div class="errors-summary">
+        <p>Merci de corriger les erreurs suivantes :</p>
+        <ul>
+          <% @participation.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= form_with model: @participation, url: participations_path, data: { controller: "form" } do |f| %>
+      <%= f.hidden_field :store_id, value: @store.id %>
+
+      <div class="form-row">
+        <div class="form-group">
+          <%= f.label :first_name, "Prénom" %>
+          <%= f.text_field :first_name, placeholder: "Marie", autocomplete: "given-name", required: true %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name, "Nom" %>
+          <%= f.text_field :last_name, placeholder: "Dupont", autocomplete: "family-name", required: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :instagram_handle, "Compte Instagram" %>
+        <%= f.text_field :instagram_handle, placeholder: "@toncompte", autocomplete: "off", required: true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email, "Adresse email" %>
+        <%= f.email_field :email, placeholder: "marie@exemple.com", autocomplete: "email", required: true %>
+      </div>
+
+      <%= f.submit "Confirmer ma participation 🍦", class: "btn-submit" %>
+    <% end %>
+  </div>
+</div>

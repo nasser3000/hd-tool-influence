@@ -1,0 +1,32 @@
+Häagen-Dazs — Confirmation de participation
+============================================
+
+Bonjour <%= @participation.first_name %> !
+
+Ta participation à notre programme influenceurs est confirmée.
+
+--- TON BON DE PARTICIPATION ---
+
+Titulaire : <%= @participation.first_name %> <%= @participation.last_name %>
+Instagram  : <%= @participation.instagram_handle %>
+Email      : <%= @participation.email %>
+
+Boutique   : <%= @store.name %> — <%= @store.city %>
+Adresse    : <%= @store.address %>
+
+Offre exclusive :
+<%= @store.offer %>
+
+Validité   : Juillet à mi-septembre 2025
+Référence  : <%= @participation.token %>
+
+--- CE QU'ON ATTEND DE TOI ---
+
+📸 Partage ton expérience : 1 story et/ou 1 réel sur Instagram en taguant @haagendazs_fr
+👥 Viens avec un +1 : amène un ami pour tester la carte d'été ensemble
+🎟️ Présente ce bon à l'équipe en boutique lors de ton arrivée
+
+Des questions ? Réponds directement à cet email.
+On a hâte de te voir ! ✨
+
+— L'équipe Häagen-Dazs

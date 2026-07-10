@@ -20,6 +20,17 @@ class DiagnosticsController < ApplicationController
       results[:brevo_api] = "#{e.class}: #{e.message}"
     end
 
+    # Test TCP port 587 to Brevo SMTP relay
+    begin
+      require "socket"
+      t = Time.now
+      s = TCPSocket.new("smtp-relay.brevo.com", 587)
+      s.close
+      results[:brevo_smtp_587] = "OK (#{((Time.now - t)*1000).round}ms)"
+    rescue => e
+      results[:brevo_smtp_587] = "#{e.class}: #{e.message}"
+    end
+
     # Test send email via Brevo
     begin
       mail = ParticipationMailer.admin_notification(Participation.last || fake_participation)

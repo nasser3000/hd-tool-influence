@@ -62,17 +62,9 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: ENV.fetch("APP_HOST", "haagendazs-influence.fr"), protocol: "https" }
-  config.action_mailer.smtp_settings = {
-    address:        ENV.fetch("SMTP_HOST", "smtp.gmail.com"),
-    port:           465,
-    domain:         ENV.fetch("APP_HOST", "hd-influence.onrender.com"),
-    user_name:      ENV["SMTP_USERNAME"],
-    password:       ENV["SMTP_PASSWORD"],
-    authentication: :plain,
-    tls:            true
-  }
+  config.action_mailer.delivery_method = :brevo
+  config.action_mailer.brevo_settings  = {}
+  config.action_mailer.default_url_options = { host: ENV.fetch("APP_HOST", "hd-influence.onrender.com"), protocol: "https" }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

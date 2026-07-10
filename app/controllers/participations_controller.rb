@@ -13,9 +13,16 @@ class ParticipationsController < ApplicationController
     if @participation.save
       begin
         ParticipationMailer.confirmation(@participation).deliver_now
-        ParticipationMailer.admin_notification(@participation).deliver_now
+        Rails.logger.info "[Mailer] Confirmation envoyée à #{@participation.email}"
       rescue => e
-        Rails.logger.error "[Mailer] #{e.class}: #{e.message}"
+        Rails.logger.error "[Mailer] Confirmation FAILED: #{e.class}: #{e.message}"
+      end
+
+      begin
+        ParticipationMailer.admin_notification(@participation).deliver_now
+        Rails.logger.info "[Mailer] Notification admin envoyée"
+      rescue => e
+        Rails.logger.error "[Mailer] Admin FAILED: #{e.class}: #{e.message}"
       end
       GoogleSheetSync.push(@participation)
       redirect_to participation_path(@participation.token)

@@ -1,6 +1,3 @@
-Participation.destroy_all
-Store.destroy_all
-
 stores = [
   # ─── FRANCE ───────────────────────────────────────────────────────────────
 
@@ -169,5 +166,9 @@ stores = [
   }
 ]
 
-stores.each { |attrs| Store.create!(attrs) }
-puts "✓ #{Store.count} boutiques créées (#{Store.france.count} France · #{Store.belgique.count} Belgique)"
+if Store.none?
+  stores.each { |attrs| Store.create!(attrs) }
+  puts "✓ #{Store.count} boutiques créées (#{Store.france.count} France · #{Store.belgique.count} Belgique)"
+else
+  puts "→ #{Store.count} boutiques déjà présentes, import ignoré"
+end

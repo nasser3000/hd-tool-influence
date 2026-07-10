@@ -33,13 +33,22 @@ class DiagnosticsController < ApplicationController
       results[:brevo_smtp_587] = "#{e.class}: #{e.message}"
     end
 
-    # Test send email via Brevo
+    # Test send confirmation email
+    p = Participation.last || fake_participation
+    results[:last_participation] = "#{p.first_name} #{p.last_name} <#{p.email}> (store_id=#{p.store_id})"
     begin
-      mail = ParticipationMailer.admin_notification(Participation.last || fake_participation)
-      mail.deliver_now
-      results[:email] = "OK"
+      ParticipationMailer.confirmation(p).deliver_now
+      results[:email_confirmation] = "OK → #{p.email}"
     rescue => e
-      results[:email] = "#{e.class}: #{e.message}"
+      results[:email_confirmation] = "#{e.class}: #{e.message}"
+    end
+
+    # Test send admin notification email
+    begin
+      ParticipationMailer.admin_notification(p).deliver_now
+      results[:email_admin] = "OK → #{ENV['ADMIN_EMAIL']}"
+    rescue => e
+      results[:email_admin] = "#{e.class}: #{e.message}"
     end
 
     # Test Google Sheet

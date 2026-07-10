@@ -11,8 +11,8 @@ class BrevoDelivery
   def deliver!(mail)
     api_key = ENV["BREVO_API_KEY"]
 
-    from_email = mail.from_addrs.first
-    from_name  = Array(mail[:from]&.display_names).first || "Häagen-Dazs Influence"
+    from_email = mail.from&.first
+    from_name  = mail[:from]&.value&.display_names&.first || "Häagen-Dazs Influence"
 
     html = mail.multipart? ? mail.html_part&.decoded : mail.decoded
     text = mail.multipart? ? mail.text_part&.decoded : nil

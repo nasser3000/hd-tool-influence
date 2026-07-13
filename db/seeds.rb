@@ -267,7 +267,7 @@ stores = [
     active: true
   },
   {
-    name: "Häagen-Dazs St Michel",
+    name: "Häagen-Dazs Saint Michel",
     city: "Paris",
     country: "FR",
     address: "30 Rue de la Huchette, 75005 Paris",
@@ -275,6 +275,9 @@ stores = [
     active: true
   }
 ]
+
+# Renamed from "St Michel" -> "Saint Michel"; migrate the existing row in place.
+Store.where(name: "Häagen-Dazs St Michel").update_all(name: "Häagen-Dazs Saint Michel")
 
 stores.each do |attrs|
   store = Store.find_or_initialize_by(name: attrs[:name])

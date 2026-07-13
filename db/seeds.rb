@@ -7,7 +7,7 @@ stores = [
     name: "Häagen-Dazs Aéroville",
     city: "Roissy-en-France",
     country: "FR",
-    address: "Zone Commerciale Aéroville, 95700 Roissy-en-France",
+    address: "Centre Commercial Aéroville, 30 Rue des Buissons, Tremblay-en-France, 95700 Roissy-en-France",
     offer: "-50% sur une boisson fraîche sur achat d'une création (hors Red Bull)\n📅 Dates : à confirmer",
     active: true
   },
@@ -182,15 +182,15 @@ stores = [
     name: "Häagen-Dazs Cannes Hoche",
     city: "Cannes",
     country: "FR",
-    address: "Adresse à confirmer, Cannes",
+    address: "16 Rue Hoche, 06400 Cannes",
     offer: GENERIC_OFFER,
     active: true
   },
   {
     name: "Häagen-Dazs Cap 3000",
-    city: "Nice",
+    city: "Saint-Laurent-du-Var",
     country: "FR",
-    address: "Adresse à confirmer, Cap 3000",
+    address: "Cap 3000, Av. Eugène Donadeï, 06700 Saint-Laurent-du-Var",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -198,7 +198,7 @@ stores = [
     name: "Häagen-Dazs Créteil",
     city: "Créteil",
     country: "FR",
-    address: "Adresse à confirmer, Créteil",
+    address: "Centre Commercial Créteil Soleil, 101 Av. du Général de Gaulle, 94000 Créteil",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -206,7 +206,7 @@ stores = [
     name: "Häagen-Dazs Evry",
     city: "Évry",
     country: "FR",
-    address: "Adresse à confirmer, Évry",
+    address: "Centre Commercial Évry 2, Bd de l'Europe-Valéry Giscard d'Estaing, 91000 Évry-Courcouronnes",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -214,7 +214,7 @@ stores = [
     name: "Häagen-Dazs Grenoble",
     city: "Grenoble",
     country: "FR",
-    address: "Adresse à confirmer, Grenoble",
+    address: "8 Pl. Grenette, 38000 Grenoble",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -222,15 +222,15 @@ stores = [
     name: "Häagen-Dazs Lyon République 2",
     city: "Lyon",
     country: "FR",
-    address: "Adresse à confirmer, Lyon",
+    address: "65 Rue de la République, 69002 Lyon",
     offer: GENERIC_OFFER,
     active: true
   },
   {
     name: "Häagen-Dazs Martinique",
-    city: "Martinique",
+    city: "Fort-de-France",
     country: "FR",
-    address: "Adresse à confirmer, Martinique",
+    address: "7 Rue de la Liberté, 97200 Fort-de-France",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -238,7 +238,7 @@ stores = [
     name: "Häagen-Dazs Monaco",
     city: "Monaco",
     country: "FR",
-    address: "Adresse à confirmer, Monaco",
+    address: "Quai Albert 1er, 98000 Monaco",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -246,7 +246,7 @@ stores = [
     name: "Häagen-Dazs Montpellier Loge",
     city: "Montpellier",
     country: "FR",
-    address: "Adresse à confirmer, Montpellier",
+    address: "12 Rue de la Loge, 34000 Montpellier",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -254,7 +254,7 @@ stores = [
     name: "Häagen-Dazs Montpellier Triangle",
     city: "Montpellier",
     country: "FR",
-    address: "Adresse à confirmer, Montpellier",
+    address: "Centre Commercial Le Triangle, All. Jules Milhau, 34000 Montpellier",
     offer: GENERIC_OFFER,
     active: true
   },
@@ -262,7 +262,15 @@ stores = [
     name: "Häagen-Dazs Nice Masséna",
     city: "Nice",
     country: "FR",
-    address: "Adresse à confirmer, Nice",
+    address: "34 Rue Masséna, 06000 Nice",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs St Michel",
+    city: "Paris",
+    country: "FR",
+    address: "30 Rue de la Huchette, 75005 Paris",
     offer: GENERIC_OFFER,
     active: true
   }

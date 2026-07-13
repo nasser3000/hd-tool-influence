@@ -15,6 +15,10 @@
 
     <div class="hero-meta">
       <div class="hero-meta-item">
+        <span class="hero-meta-icon">🍦</span>
+        <span>1 cornet ou pot 2 boules, ou 1 Sorbet Lemonade au choix, offert en boutique</span>
+      </div>
+      <div class="hero-meta-item">
         <span class="hero-meta-icon">🎁</span>
         <span>Une offre exclusive par boutique à partager avec ta communauté</span>
       </div>
@@ -54,6 +58,14 @@
     <% end %>
   </nav>
 
+  <%= form_with url: root_path(anchor: "boutiques"), method: :get, class: "city-filter" do %>
+    <% if @country %><%= hidden_field_tag :country, @country %><% end %>
+    <%= select_tag :city,
+          options_for_select([["Toutes les villes", ""]] + @cities.map { |c| [c, c] }, @city),
+          class: "city-filter-select",
+          onchange: "this.form.requestSubmit()" %>
+  <% end %>
+
   <% if @stores.any? %>
     <div class="stores-grid">
       <% @stores.each do |store| %>
@@ -69,7 +81,7 @@
               <span><%= store.address %></span>
             </div>
             <div class="offer-box">
-              <div class="offer-label">🎁 Offre exclusive</div>
+              <div class="offer-label">🎁 Offre exclusive pour ta communauté</div>
               <div class="offer-text"><%= simple_format store.offer, {}, wrapper_tag: "span" %></div>
             </div>
             <%= link_to new_participation_path(store_id: store.id), class: "store-card-cta" do %>

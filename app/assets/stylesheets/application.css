@@ -418,6 +418,9 @@ a { text-decoration: none; color: inherit; }
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  scroll-margin-top: 0;
 }
 
 .section-title {
@@ -466,6 +469,33 @@ a { text-decoration: none; color: inherit; }
 }
 
 .country-tab .flag { font-size: 1.2rem; }
+
+.city-filter {
+  display: flex;
+  justify-content: center;
+  margin: -20px 0 32px;
+}
+
+.city-filter-select {
+  appearance: none;
+  border: 1px solid var(--cream-dark);
+  background: var(--white) url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A0826D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 14px center;
+  background-size: 10px 7px;
+  color: var(--text-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 34px 6px 14px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.city-filter-select:hover,
+.city-filter-select:focus {
+  border-color: var(--burgundy);
+  color: var(--burgundy);
+  outline: none;
+}
 
 /* ===== STORE GRID ===== */
 .stores-grid {

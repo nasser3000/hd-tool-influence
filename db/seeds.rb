@@ -1,3 +1,5 @@
+GENERIC_OFFER = "Pas d'offre locale spécifique pour le moment — l'équipe est ravie de t'accueillir pour ta dégustation !\n📅 Été 2026".freeze
+
 stores = [
   # ─── FRANCE ───────────────────────────────────────────────────────────────
 
@@ -14,7 +16,7 @@ stores = [
     city: "Bourges",
     country: "FR",
     address: "Centre Commercial Carrefour, 18000 Bourges",
-    offer: "1 boule achetée = 1 boule offerte\n📅 Juillet · Sur mention d'un code",
+    offer: "1 boule achetée = 1 boule offerte\n📅 Juillet · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -22,7 +24,7 @@ stores = [
     city: "Clermont-Ferrand",
     country: "FR",
     address: "Centre Commercial Jaude, 63000 Clermont-Ferrand",
-    offer: "-15% sur les Lemonades\n📅 Tout juillet · Sur mention d'un code",
+    offer: "-15% sur les Lemonades\n📅 Tout juillet · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -30,7 +32,7 @@ stores = [
     city: "Colmar",
     country: "FR",
     address: "Centre Commercial, 68000 Colmar",
-    offer: "-30% sur les sorbets Lemonades\n📅 Juillet + Août · Sur mention d'un code",
+    offer: "-30% sur les sorbets Lemonades\n📅 Juillet + Août · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -38,7 +40,7 @@ stores = [
     city: "Paris",
     country: "FR",
     address: "Forum des Halles, 101 Porte Berger, 75001 Paris",
-    offer: "1 topping offert par boule achetée\n📅 15 juillet au 15 août · Sur mention d'un code",
+    offer: "1 topping offert par boule achetée\n📅 15 juillet au 15 août · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -46,7 +48,7 @@ stores = [
     city: "Lille",
     country: "FR",
     address: "Rue Neuve, 59000 Lille",
-    offer: "-20% sur les sorbets Lemonades\n📅 Juillet · Sur mention d'un code",
+    offer: "-20% sur les sorbets Lemonades\n📅 Juillet · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -54,7 +56,7 @@ stores = [
     city: "Lille",
     country: "FR",
     address: "Centre Commercial Euralille, 59777 Euralille",
-    offer: "-20% sur les sorbets Lemonades\n📅 Juillet · Sur mention d'un code",
+    offer: "-20% sur les sorbets Lemonades\n📅 Juillet · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -62,7 +64,7 @@ stores = [
     city: "Villeneuve-la-Garenne",
     country: "FR",
     address: "Centre Commercial Qwartz, 92390 Villeneuve-la-Garenne",
-    offer: "1 topping offert par boule achetée\n📅 Juillet + Août · Sur mention d'un code",
+    offer: "1 topping offert par boule achetée\n📅 Juillet + Août · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -70,7 +72,7 @@ stores = [
     city: "Aulnay-sous-Bois",
     country: "FR",
     address: "Centre Commercial Parinor, 93600 Aulnay-sous-Bois",
-    offer: "-20% sur les créations et les shakes\n📅 Août · Sur mention d'un code",
+    offer: "-20% sur les créations et les shakes\n📅 Août · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -78,7 +80,7 @@ stores = [
     city: "Paris",
     country: "FR",
     address: "186 Avenue de Wagram, 75017 Paris",
-    offer: "1 topping offert par boule achetée\n📅 Juillet + Août · Sur mention d'un code",
+    offer: "1 topping offert par boule achetée\n📅 Juillet + Août · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -86,7 +88,7 @@ stores = [
     city: "Strasbourg",
     country: "FR",
     address: "Centre Ville, 67000 Strasbourg",
-    offer: "-30% sur les sorbets Lemonades\n📅 Juillet + Août · Sur mention d'un code",
+    offer: "-30% sur les sorbets Lemonades\n📅 Juillet + Août · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -163,12 +165,113 @@ stores = [
     address: "Meir 78, 2000 Antwerpen",
     offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
     active: true
+  },
+
+  # ─── BOUTIQUES PARTICIPANTES SANS OFFRE LOCALE SPÉCIFIQUE ────────────────
+  # NOTE: adresses à confirmer avec l'équipe terrain avant mise en ligne.
+
+  {
+    name: "Häagen-Dazs Bastia",
+    city: "Bastia",
+    country: "FR",
+    address: "Adresse à confirmer, Bastia",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Cannes Hoche",
+    city: "Cannes",
+    country: "FR",
+    address: "Adresse à confirmer, Cannes",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Cap 3000",
+    city: "Nice",
+    country: "FR",
+    address: "Adresse à confirmer, Cap 3000",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Créteil",
+    city: "Créteil",
+    country: "FR",
+    address: "Adresse à confirmer, Créteil",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Evry",
+    city: "Évry",
+    country: "FR",
+    address: "Adresse à confirmer, Évry",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Grenoble",
+    city: "Grenoble",
+    country: "FR",
+    address: "Adresse à confirmer, Grenoble",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Lyon République 2",
+    city: "Lyon",
+    country: "FR",
+    address: "Adresse à confirmer, Lyon",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Martinique",
+    city: "Martinique",
+    country: "FR",
+    address: "Adresse à confirmer, Martinique",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Monaco",
+    city: "Monaco",
+    country: "FR",
+    address: "Adresse à confirmer, Monaco",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Montpellier Loge",
+    city: "Montpellier",
+    country: "FR",
+    address: "Adresse à confirmer, Montpellier",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Montpellier Triangle",
+    city: "Montpellier",
+    country: "FR",
+    address: "Adresse à confirmer, Montpellier",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
+    name: "Häagen-Dazs Nice Masséna",
+    city: "Nice",
+    country: "FR",
+    address: "Adresse à confirmer, Nice",
+    offer: GENERIC_OFFER,
+    active: true
   }
 ]
 
-if Store.none?
-  stores.each { |attrs| Store.create!(attrs) }
-  puts "✓ #{Store.count} boutiques créées (#{Store.france.count} France · #{Store.belgique.count} Belgique)"
-else
-  puts "→ #{Store.count} boutiques déjà présentes, import ignoré"
+stores.each do |attrs|
+  store = Store.find_or_initialize_by(name: attrs[:name])
+  store.assign_attributes(attrs)
+  store.save!
 end
+
+puts "✓ #{Store.count} boutiques (#{Store.france.count} France · #{Store.belgique.count} Belgique)"

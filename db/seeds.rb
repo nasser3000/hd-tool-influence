@@ -273,6 +273,14 @@ stores = [
     address: "30 Rue de la Huchette, 75005 Paris",
     offer: GENERIC_OFFER,
     active: true
+  },
+  {
+    name: "Häagen-Dazs Notre Dame",
+    city: "Paris",
+    country: "FR",
+    address: "1 Rue d'Arcole, 75004 Paris",
+    offer: GENERIC_OFFER,
+    active: true
   }
 ]
 

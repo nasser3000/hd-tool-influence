@@ -8,7 +8,7 @@ stores = [
     city: "Roissy-en-France",
     country: "FR",
     address: "Centre Commercial Aéroville, 30 Rue des Buissons, Tremblay-en-France, 95700 Roissy-en-France",
-    offer: "-50% sur une boisson fraîche sur achat d'une création (hors Red Bull)\n📅 Dates : à confirmer",
+    offer: "1 topping offert par boule achetée\n📅 Du 17 au 31 août · Sur présentation du screenshot de la storie",
     active: true
   },
   {
@@ -96,7 +96,7 @@ stores = [
     city: "Cagnes-sur-Mer",
     country: "FR",
     address: "Centre Commercial Polygone Riviera, 06800 Cagnes-sur-Mer",
-    offer: "-50% sur le 2ème milkshake\n📅 Septembre",
+    offer: "-50% sur le 2ème milkshake\n📅 Du 31 août au 4 septembre",
     active: true
   },
 
@@ -107,7 +107,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Gare du Midi, Avenue Fonsny, 1060 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
   {
@@ -115,7 +115,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Gare du Midi, Avenue Fonsny, 1060 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
   {
@@ -123,7 +123,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Galerie de la Toison d'Or, Avenue de la Toison d'Or, 1050 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
   {
@@ -131,7 +131,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Place de la Bourse, 1000 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
   {
@@ -139,7 +139,7 @@ stores = [
     city: "Charleroi",
     country: "BE",
     address: "Centre Commercial, 6000 Charleroi",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
   {
@@ -147,7 +147,7 @@ stores = [
     city: "Liège",
     country: "BE",
     address: "Shopping Médiacité, Rue du Viaduc 49, 4020 Liège",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
   {
@@ -155,7 +155,7 @@ stores = [
     city: "Liège",
     country: "BE",
     address: "Shopping Belle-Île, Rue de Mons 3, 4000 Liège",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
   {
@@ -163,7 +163,7 @@ stores = [
     city: "Anvers",
     country: "BE",
     address: "Meir 78, 2000 Antwerpen",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Un jeudi + un vendredi en juillet (date à confirmer)",
+    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 20 et vendredi 31 juillet",
     active: true
   },
 
@@ -183,7 +183,7 @@ stores = [
     city: "Cannes",
     country: "FR",
     address: "16 Rue Hoche, 06400 Cannes",
-    offer: GENERIC_OFFER,
+    offer: "-20% sur les sorbets Lemonades\n📅 1 semaine en août (lundi au vendredi, date à définir selon passage des influenceurs)",
     active: true
   },
   {
@@ -191,7 +191,7 @@ stores = [
     city: "Saint-Laurent-du-Var",
     country: "FR",
     address: "Cap 3000, Av. Eugène Donadeï, 06700 Saint-Laurent-du-Var",
-    offer: GENERIC_OFFER,
+    offer: "-20% sur les sorbets Lemonades\n📅 2e semaine d'août (lundi au vendredi, date à définir selon passage des influenceurs)",
     active: true
   },
   {
@@ -215,7 +215,7 @@ stores = [
     city: "Grenoble",
     country: "FR",
     address: "8 Pl. Grenette, 38000 Grenoble",
-    offer: GENERIC_OFFER,
+    offer: "-20% sur les sorbets Lemonades\n📅 1 semaine dès que possible (lundi au vendredi, date à définir selon passage des influenceurs)",
     active: true
   },
   {
@@ -259,11 +259,19 @@ stores = [
     active: true
   },
   {
+    name: "Häagen-Dazs Nantes Atlantis",
+    city: "Saint-Herblain",
+    country: "FR",
+    address: "Centre Commercial Atlantis, Pl. Océane 2, 44800 Saint-Herblain",
+    offer: GENERIC_OFFER,
+    active: true
+  },
+  {
     name: "Häagen-Dazs Nice Masséna",
     city: "Nice",
     country: "FR",
     address: "34 Rue Masséna, 06000 Nice",
-    offer: GENERIC_OFFER,
+    offer: "-20% sur les sorbets Lemonades\n📅 1 semaine dès que possible (lundi au vendredi, date à définir selon passage des influenceurs)",
     active: true
   },
   {

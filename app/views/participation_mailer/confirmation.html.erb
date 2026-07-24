@@ -92,6 +92,7 @@
                       <tr>
                         <td style="font-size:14px;font-weight:700;color:#2C1810;line-height:1.6;">
                           🍦 1 cornet ou pot 2 boules de Strawberry Mochi et/ou Chocolate Brownie<br>
+                          <span style="color:#A0826D;font-weight:600;">et/ou</span><br>
                           🍋 1 Sorbet Lëmonade au choix entre les 3 recettes
                         </td>
                       </tr>
@@ -148,7 +149,14 @@
                   <td style="width:40px;vertical-align:top;padding-top:2px;font-size:22px;">📸</td>
                   <td style="padding-bottom:16px;">
                     <p style="margin:0;font-size:14px;font-weight:700;color:#2C1810;">Partage ton expérience</p>
-                    <p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#6B4C3B;">1 story et/ou 1 réel sur ton compte Instagram en taguant <strong>@haagendazs_fr</strong></p>
+                    <p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#6B4C3B;">1 story et/ou 1 réel sur ton compte Instagram en taguant <strong><%= @store.country == "BE" ? "@haagendazsbe" : "@haagendazsfrance" %></strong></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:40px;vertical-align:top;padding-top:2px;font-size:22px;">📍</td>
+                  <td style="padding-bottom:16px;">
+                    <p style="margin:0;font-size:14px;font-weight:700;color:#2C1810;">Identifie la boutique</p>
+                    <p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#6B4C3B;">Mentionne l'adresse (<%= @store.address %>) et identifie bien la marque Häagen-Dazs dans ton contenu.</p>
                   </td>
                 </tr>
                 <tr>

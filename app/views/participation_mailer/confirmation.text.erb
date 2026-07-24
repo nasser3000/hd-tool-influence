@@ -16,6 +16,7 @@ Adresse    : <%= @store.address %>
 
 Dégustation en boutique (au choix) :
 🍦 1 cornet ou pot 2 boules de Strawberry Mochi et/ou Chocolate Brownie
+et/ou
 🍋 1 Sorbet Lëmonade au choix entre les 3 recettes
 
 Offre pour tes abonnés :
@@ -26,7 +27,8 @@ Référence  : <%= @participation.token %>
 
 --- CE QU'ON ATTEND DE TOI ---
 
-📸 Partage ton expérience : 1 story et/ou 1 réel sur Instagram en taguant @haagendazs_fr
+📸 Partage ton expérience : 1 story et/ou 1 réel sur Instagram en taguant <%= @store.country == "BE" ? "@haagendazsbe" : "@haagendazsfrance" %>
+📍 Identifie la boutique : mentionne l'adresse (<%= @store.address %>) et identifie bien la marque Häagen-Dazs dans ton contenu
 👥 Viens avec un +1 : amène un ami pour tester la carte d'été ensemble
 🎟️ Présente ce bon à l'équipe en boutique lors de ton arrivée
 

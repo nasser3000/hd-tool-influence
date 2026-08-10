@@ -16,7 +16,7 @@ stores = [
     city: "Bourges",
     country: "FR",
     address: "Centre Commercial Carrefour, 18000 Bourges",
-    offer: "1 boule achetée = 1 boule offerte\n📅 Juillet · Sur présentation du screenshot de la storie",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -48,7 +48,7 @@ stores = [
     city: "Lille",
     country: "FR",
     address: "Rue Neuve, 59000 Lille",
-    offer: "-20% sur les sorbets Lemonades\n📅 Juillet · Sur présentation du screenshot de la storie",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -56,7 +56,7 @@ stores = [
     city: "Lille",
     country: "FR",
     address: "Centre Commercial Euralille, 59777 Euralille",
-    offer: "-20% sur les sorbets Lemonades\n📅 Juillet · Sur présentation du screenshot de la storie",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -107,7 +107,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Gare du Midi, Avenue Fonsny, 1060 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -115,7 +115,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Gare du Midi, Avenue Fonsny, 1060 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -123,7 +123,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Galerie de la Toison d'Or, Avenue de la Toison d'Or, 1050 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -131,7 +131,7 @@ stores = [
     city: "Bruxelles",
     country: "BE",
     address: "Place de la Bourse, 1000 Bruxelles",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -139,7 +139,7 @@ stores = [
     city: "Charleroi",
     country: "BE",
     address: "Centre Commercial, 6000 Charleroi",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -147,7 +147,7 @@ stores = [
     city: "Liège",
     country: "BE",
     address: "Shopping Médiacité, Rue du Viaduc 49, 4020 Liège",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -155,7 +155,7 @@ stores = [
     city: "Liège",
     country: "BE",
     address: "Shopping Belle-Île, Rue de Mons 3, 4000 Liège",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
   {
@@ -163,7 +163,7 @@ stores = [
     city: "Anvers",
     country: "BE",
     address: "Meir 78, 2000 Antwerpen",
-    offer: "-50% sur 3 sorbets Lemonades\n📅 Jeudi 30 et vendredi 31 juillet",
+    offer: GENERIC_OFFER,
     active: true
   },
 
